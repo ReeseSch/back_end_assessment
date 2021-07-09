@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Back End Assessment</title>
+  </head>
+  <body class="container">
+    <button id="complimentButton">Get a compliment</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+
+    </script>
+
+    <button id="fortuneButton">Get your Fortune!!!</button>
+    <script>
+      document.getElementById("fortuneButton").onclick = function () {
+        axios.get("http://localhost:4000/api/fortune/")
+          .then(function (response) {
+            const data = response.data
+            alert(data)
+          })
+      }
+
+    </script>
+<button id="inspirationButton">Is Today a Good Day to Follow Your Dreams??</button>
+
+
+<script>
+        document.getElementById("inspirationButton").onclick = function () {
+          axios.get("http://localhost:4000/api/inspiration")
+          .then(function (response) {
+            const data = response.data
+            alert(data)
+          })
+        }
+    </script>
+<br>
+    <section id="shareDreams">
+      <h2>Share your Hopes and dreams!</h2>
+      <h3>Coming soon hopefully</h3>
+      <input type="text" placeholder="Share here!" id="text">
+      <button>Share!</button>
+      
+    </section> 
+
+    <section id="dreamsDisplay"></section>
+<br>
+    <h1>Get a fun trivia question!</h1>
+    <h3>Coming Soon</h3>
+    <button>Get question</button>
+
+    <div></div>
+
+
+    <!-- <script src='./node_modules/axios/dist/axios.min.js'></script> -->
+    <!-- <script src="script.js"></script> -->
+    <br>
+    <button id="catButton">Get Cats!</button>
+    
+    
+    <script>
+      document.getElementById("catButton").onclick = function () {
+        axios.get("http://placekitten.com/g/200/300")
+        .then(function (response) {
+          body.append = res
+        })
+      }
+      </script>
+
+<div></div>
+
+
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script scr="main.js"></script>
+</body>
+</html>
